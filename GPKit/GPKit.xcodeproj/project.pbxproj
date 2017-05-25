@@ -18,6 +18,7 @@
 		451804531EC31123008268B8 /* GPKit+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804441EC31123008268B8 /* GPKit+UITextField.swift */; };
 		451804541EC31123008268B8 /* GPKit+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804451EC31123008268B8 /* GPKit+UIView.swift */; };
 		451804551EC31123008268B8 /* GPKit+UIViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */; };
+		458849441ED6DFD600EAB977 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458849431ED6DFD600EAB977 /* Alamofire.framework */; };
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
 		45A00C2D1EBD16C1001BC817 /* GPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A00C1F1EBD16C0001BC817 /* GPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +46,7 @@
 		451804441EC31123008268B8 /* GPKit+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UITextField.swift"; sourceTree = "<group>"; };
 		451804451EC31123008268B8 /* GPKit+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIView.swift"; sourceTree = "<group>"; };
 		451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIViewContorller.swift"; sourceTree = "<group>"; };
+		458849431ED6DFD600EAB977 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TimeIn-cfeqtavkdgokzicpfbzhvvrqoanp/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		45A00C1C1EBD16C0001BC817 /* GPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A00C1F1EBD16C0001BC817 /* GPKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPKit.h; sourceTree = "<group>"; };
 		45A00C201EBD16C0001BC817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458849441ED6DFD600EAB977 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +92,21 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		458849421ED6DFD600EAB977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458849431ED6DFD600EAB977 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45A00C121EBD16C0001BC817 = {
 			isa = PBXGroup;
 			children = (
 				45A00C1E1EBD16C0001BC817 /* GPKit */,
 				45A00C291EBD16C1001BC817 /* GPKitTests */,
 				45A00C1D1EBD16C0001BC817 /* Products */,
+				458849421ED6DFD600EAB977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -363,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

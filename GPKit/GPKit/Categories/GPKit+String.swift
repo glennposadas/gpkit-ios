@@ -6,14 +6,23 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-import UIKit
+import Alamofire
 
-extension String {
+extension String: ParameterEncoding {
+    
+    /** Encoding for service
+     */
+    
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var request = try urlRequest.asURLRequest()
+        request.httpBody = data(using: .utf8, allowLossyConversion: false)
+        return request
+    }
     
     /** Identical to the extension of UITextField's hasValue()
      */
     
-    public func hasValidValue() -> Bool {
+    func hasValidValue() -> Bool {
         let whitespaceSet = CharacterSet.whitespaces
         
         if self == "" || self == " " {
@@ -31,14 +40,14 @@ extension String {
     /** Clever function to add/append paths as strings just like in Firebase.
      */
     
-    public func append(path: String) -> String {
+    func append(path: String) -> String {
         return "\(self)\(path)"
     }
     
     /** Checks if the input email is valid or not
      */
     
-    public func isValidEmail() -> Bool {
+    func isValidEmail() -> Bool {
         
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
@@ -51,22 +60,22 @@ extension String {
      *  Returns: String: "Jan 2017"
      */
     
-    public func convertToFindWorkDateFormat() -> String {
+    func convertToReadableDateFormat() -> String {
         let dateFormatter = DateFormatter()
-        let findWorkDateFormatter = DateFormatter()
+        let geoDriveDateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        findWorkDateFormatter.dateFormat = "MMM yyyy"
+        geoDriveDateFormatter.dateFormat = "MMM yyyy"
         
         let date = dateFormatter.date(from: self)
         
-        return findWorkDateFormatter.string(from: date!)
+        return geoDriveDateFormatter.string(from: date!)
     }
     
     /** Extract month from a string
      */
     
-    public func extractMonth() -> String {
+    func extractMonth() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -86,7 +95,7 @@ extension String {
     /** Extract year from a string
      */
     
-    public func extractYear() -> String {
+    func extractYear() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -103,7 +112,7 @@ extension String {
      *  January --> "1"
      */
     
-    public func convertMonthSymbolToInt() -> String {
+    func convertMonthSymbolToInt() -> String {
         return "\(DateFormatter().monthSymbols.index(of: self)! + 1)"
     }
     
@@ -122,7 +131,7 @@ extension String {
     }
 }
 
-public class FindWorkString {
+public class GPKitString {
     
     /** Returns the cool format for Date and Time now.
      */
