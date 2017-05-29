@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
 
     /**
      
@@ -18,7 +18,7 @@ extension UITextField {
      
      */
     
-    public func hasContents() -> Bool {
+    func hasContents() -> Bool {
         
         let whitespaceSet = CharacterSet.whitespaces
         
@@ -38,7 +38,7 @@ extension UITextField {
      The function to be called for the alert.
      */
     
-    public func setupTextFieldWithDelegate(
+    func setupTextFieldWithDelegate(
         delegate: UITextFieldDelegate,
         textColor: UIColor,
         placeholderText: String?,
@@ -78,7 +78,7 @@ extension UITextField {
      The function to setup a textField for any input type
      */
     
-    public func setupTextFieldForInputType(inputType: UIKeyboardType) -> UITextField {
+    func setupTextFieldForInputType(inputType: UIKeyboardType) -> UITextField {
         //self.font = R.font.gothamBook(size: 14.0)
         self.keyboardType = inputType
         

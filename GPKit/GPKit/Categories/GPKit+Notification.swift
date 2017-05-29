@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Notification.Name {
+public extension Notification.Name {
     static let shouldPresentAuth = Notification.Name("shouldPresentAuth")
     static let shouldPresentHome = Notification.Name("shouldPresentHome")
 }

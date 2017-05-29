@@ -13,7 +13,14 @@ class GPKitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let newVC = UIViewController()
+        newVC.showAlert(
+            title: "Test Title",
+            message: "New Message",
+            okayButtonTitle: "OK",
+            cancelButtonTitle: nil,
+            withBlock: nil
+        )
     }
     
     override func tearDown() {

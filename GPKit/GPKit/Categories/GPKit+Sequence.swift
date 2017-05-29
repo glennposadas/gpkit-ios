@@ -26,7 +26,7 @@ public extension Sequence where Iterator.Element: Equatable {
     }
 }
 
-extension MutableCollection where Indices.Iterator.Element == Index {
+public extension MutableCollection where Indices.Iterator.Element == Index {
     /// Shuffles the contents of this collection.
     mutating func shuffle() {
         let c = count
@@ -41,7 +41,7 @@ extension MutableCollection where Indices.Iterator.Element == Index {
     }
 }
 
-extension Sequence {
+public extension Sequence {
     /// Returns an array with the contents of this sequence, shuffled.
     func shuffled() -> [Iterator.Element] {
         var result = Array(self)

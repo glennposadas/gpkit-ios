@@ -8,8 +8,8 @@
 
 import Foundation
 
-class GPKitError {
-    static func newError(description: String, code: Int = -1) -> Error {
+public class GPKitError {
+    public static func newError(description: String, code: Int = -1) -> Error {
         let customError = NSError(
             domain: "GPKit",
             code: code,

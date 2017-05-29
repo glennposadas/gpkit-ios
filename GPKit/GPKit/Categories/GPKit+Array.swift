@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Array where Element: Equatable {
+public extension Array where Element: Equatable {
     mutating func prependUniqueObj(object: Iterator.Element) {
         if contains(object) == false {
             insert(object, at: 0)

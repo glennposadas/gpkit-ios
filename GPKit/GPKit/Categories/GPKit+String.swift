@@ -6,7 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-extension String {
+public extension String {
     
     /** Identical to the extension of UITextField's hasValue()
      */
@@ -125,7 +125,7 @@ public class GPKitString {
     /** Returns the cool format for Date and Time now.
      */
     
-    public class func dateTimeNowString() -> String {
+    class func dateTimeNowString() -> String {
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = DateFormatter.Style.short
         dateformatter.timeStyle = DateFormatter.Style.short

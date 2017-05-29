@@ -20,6 +20,7 @@
 		451804551EC31123008268B8 /* GPKit+UIViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */; };
 		459BA5811EDBD66500A22001 /* GPKit+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BA5801EDBD66500A22001 /* GPKit+Array.swift */; };
 		459BA5861EDBD6C300A22001 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */; };
+		459BA58C1EDBE4BD00A22001 /* GPKit+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BA58B1EDBE4BD00A22001 /* GPKit+Error.swift */; };
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
 		45A00C2D1EBD16C1001BC817 /* GPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A00C1F1EBD16C0001BC817 /* GPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +51,7 @@
 		458849431ED6DFD600EAB977 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TimeIn-cfeqtavkdgokzicpfbzhvvrqoanp/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		459BA5801EDBD66500A22001 /* GPKit+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Array.swift"; sourceTree = "<group>"; };
 		459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
+		459BA58B1EDBE4BD00A22001 /* GPKit+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Error.swift"; sourceTree = "<group>"; };
 		45A00C1C1EBD16C0001BC817 /* GPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A00C1F1EBD16C0001BC817 /* GPKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPKit.h; sourceTree = "<group>"; };
 		45A00C201EBD16C0001BC817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				459BA5801EDBD66500A22001 /* GPKit+Array.swift */,
 				4518043A1EC31122008268B8 /* GPKit+Double.swift */,
+				459BA58B1EDBE4BD00A22001 /* GPKit+Error.swift */,
 				4518043B1EC31122008268B8 /* GPKit+Notification.swift */,
 				4518043C1EC31122008268B8 /* GPKit+Sequence.swift */,
 				4518043D1EC31122008268B8 /* GPKit+String.swift */,
@@ -273,6 +276,7 @@
 				451804531EC31123008268B8 /* GPKit+UITextField.swift in Sources */,
 				451804541EC31123008268B8 /* GPKit+UIView.swift in Sources */,
 				4518044C1EC31123008268B8 /* GPKit+String.swift in Sources */,
+				459BA58C1EDBE4BD00A22001 /* GPKit+Error.swift in Sources */,
 				459BA5861EDBD6C300A22001 /* MIBadgeButton.swift in Sources */,
 				4518044F1EC31123008268B8 /* GPKit+UIColor.swift in Sources */,
 				4518044B1EC31123008268B8 /* GPKit+Sequence.swift in Sources */,

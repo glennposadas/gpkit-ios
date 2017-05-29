@@ -14,9 +14,9 @@ public enum RadiusSize: CGFloat {
     case edgeAmount = 3.0 // amount for the view's edge only.
 }
 
-extension UIView {
+public extension UIView {
     
-    public func makeRoundCornerLeft(radiusSize: RadiusSize) -> UIView {
+    func makeRoundCornerLeft(radiusSize: RadiusSize) -> UIView {
         
         let path = UIBezierPath(roundedRect:self.bounds,
                                 byRoundingCorners:[.topLeft, .bottomLeft],
@@ -30,7 +30,7 @@ extension UIView {
         return self
     }
     
-    public func makeRoundCorners() -> UIView {
+    func makeRoundCorners() -> UIView {
         self.layer.cornerRadius = self.frame.size.height / 2
         self.layer.masksToBounds = true
         self.clipsToBounds = true
@@ -39,7 +39,7 @@ extension UIView {
         return self
     }
     
-    public func addCornerRadius(radiusSize: RadiusSize) -> UIView {
+    func addCornerRadius(radiusSize: RadiusSize) -> UIView {
         self.layer.cornerRadius = radiusSize.rawValue
         self.layer.masksToBounds = true
         self.clipsToBounds = true
@@ -47,7 +47,7 @@ extension UIView {
         return self
     }
     
-    public func addCornerRadius(
+    func addCornerRadius(
         cornerRadius: CGFloat,
         borderColor: UIColor,
         borderWidth: CGFloat) -> UIView {
@@ -61,7 +61,7 @@ extension UIView {
         return self
     }
     
-    public func addShadowToSeparatorView() {
+    func addShadowToSeparatorView() {
         let shadowPath = UIBezierPath(rect: self.bounds)
         
         self.layer.masksToBounds = false
@@ -70,7 +70,7 @@ extension UIView {
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    public func addDefaultShadow() {
+    func addDefaultShadow() {
         let shadowPath = UIBezierPath(rect: self.bounds)
         
         self.layer.masksToBounds = false
@@ -79,25 +79,21 @@ extension UIView {
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    public func addShadowBottomRight() {
+    func addShadowBottomRight() {
         self.layer.masksToBounds = false
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2.0
     }
     
-    public func addShadowToCell() {
+    func addShadowToCell() {
         self.layer.shadowOpacity = 0.7
         self.layer.shadowRadius = 1.0
         self.layer.shadowOffset = CGSize(width: 0, height: 0);
         self.layer.shadowColor = UIColor.black.cgColor
     }
         
-    /**
-     Shakes the view
-     */
-    
-    public func shake() {
+    func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 0.6

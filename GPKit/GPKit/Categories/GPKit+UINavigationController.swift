@@ -8,11 +8,11 @@
 
 import UIKit
 
-extension UINavigationController {
+public extension UINavigationController {
     
     /// Used for finding a specific view under the navigationBar
     
-    public func getView(withTag tag: Int) -> UIView? {
+    func getView(withTag tag: Int) -> UIView? {
         let navigationBar = self.navigationBar
         
         for subView in navigationBar.subviews {
@@ -25,11 +25,11 @@ extension UINavigationController {
         return nil
     }
     
-    public func showSubtitle(title: String) {
+    func showSubtitle(title: String) {
         self.navigationBar.topItem?.prompt = title
     }
     
-    public func removeSubtitle() {
+    func removeSubtitle() {
         self.navigationBar.topItem?.prompt = nil
     }
 }
