@@ -9,14 +9,7 @@
 import UIKit
 
 extension UITextField {
-    
-    /** Instantiate with textValue
-     */
-    
-    public func instantiate(withText: String) {
-        
-    }
-    
+
     /**
      
      - Validation for TextFields.

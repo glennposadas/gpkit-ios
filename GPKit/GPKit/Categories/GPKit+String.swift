@@ -122,7 +122,7 @@ extension String {
     }
 }
 
-public class FindWorkString {
+public class GPKitString {
     
     /** Returns the cool format for Date and Time now.
      */

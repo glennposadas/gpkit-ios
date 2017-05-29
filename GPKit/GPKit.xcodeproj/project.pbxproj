@@ -18,6 +18,10 @@
 		451804531EC31123008268B8 /* GPKit+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804441EC31123008268B8 /* GPKit+UITextField.swift */; };
 		451804541EC31123008268B8 /* GPKit+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804451EC31123008268B8 /* GPKit+UIView.swift */; };
 		451804551EC31123008268B8 /* GPKit+UIViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */; };
+		455828C71EDB00A9003FF560 /* GPKit+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455828C61EDB00A9003FF560 /* GPKit+Error.swift */; };
+		455828CB1EDB0134003FF560 /* GPKit+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455828CA1EDB0134003FF560 /* GPKit+Date.swift */; };
+		455828CD1EDB0163003FF560 /* GPKit+UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455828CC1EDB0163003FF560 /* GPKit+UIDevice.swift */; };
+		455828CF1EDB0180003FF560 /* GPKit+DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455828CE1EDB0180003FF560 /* GPKit+DispatchQueue.swift */; };
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
 		45A00C2D1EBD16C1001BC817 /* GPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A00C1F1EBD16C0001BC817 /* GPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +49,10 @@
 		451804441EC31123008268B8 /* GPKit+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UITextField.swift"; sourceTree = "<group>"; };
 		451804451EC31123008268B8 /* GPKit+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIView.swift"; sourceTree = "<group>"; };
 		451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIViewContorller.swift"; sourceTree = "<group>"; };
+		455828C61EDB00A9003FF560 /* GPKit+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Error.swift"; sourceTree = "<group>"; };
+		455828CA1EDB0134003FF560 /* GPKit+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Date.swift"; sourceTree = "<group>"; };
+		455828CC1EDB0163003FF560 /* GPKit+UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIDevice.swift"; sourceTree = "<group>"; };
+		455828CE1EDB0180003FF560 /* GPKit+DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+DispatchQueue.swift"; sourceTree = "<group>"; };
 		45A00C1C1EBD16C0001BC817 /* GPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A00C1F1EBD16C0001BC817 /* GPKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPKit.h; sourceTree = "<group>"; };
 		45A00C201EBD16C0001BC817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 				451804441EC31123008268B8 /* GPKit+UITextField.swift */,
 				451804451EC31123008268B8 /* GPKit+UIView.swift */,
 				451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */,
+				455828C61EDB00A9003FF560 /* GPKit+Error.swift */,
+				455828CA1EDB0134003FF560 /* GPKit+Date.swift */,
+				455828CC1EDB0163003FF560 /* GPKit+UIDevice.swift */,
+				455828CE1EDB0180003FF560 /* GPKit+DispatchQueue.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -240,15 +252,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455828C71EDB00A9003FF560 /* GPKit+Error.swift in Sources */,
 				451804491EC31123008268B8 /* GPKit+Double.swift in Sources */,
+				455828CB1EDB0134003FF560 /* GPKit+Date.swift in Sources */,
 				451804521EC31123008268B8 /* GPKit+UINavigationController.swift in Sources */,
 				451804501EC31123008268B8 /* GPKit+UIImage.swift in Sources */,
 				451803F91EC2BC99008268B8 /* GPLog.swift in Sources */,
+				455828CF1EDB0180003FF560 /* GPKit+DispatchQueue.swift in Sources */,
 				451804531EC31123008268B8 /* GPKit+UITextField.swift in Sources */,
 				451804541EC31123008268B8 /* GPKit+UIView.swift in Sources */,
 				4518044C1EC31123008268B8 /* GPKit+String.swift in Sources */,
 				4518044F1EC31123008268B8 /* GPKit+UIColor.swift in Sources */,
 				4518044B1EC31123008268B8 /* GPKit+Sequence.swift in Sources */,
+				455828CD1EDB0163003FF560 /* GPKit+UIDevice.swift in Sources */,
 				451804551EC31123008268B8 /* GPKit+UIViewContorller.swift in Sources */,
 				4518044A1EC31123008268B8 /* GPKit+Notification.swift in Sources */,
 			);

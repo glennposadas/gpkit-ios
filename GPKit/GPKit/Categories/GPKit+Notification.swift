@@ -11,7 +11,4 @@ import UIKit
 extension Notification.Name {
     static let shouldPresentAuth = Notification.Name("shouldPresentAuth")
     static let shouldPresentHome = Notification.Name("shouldPresentHome")
-    static let presentLogout = Notification.Name("presentLogout")
-    
-    static let shouldSaveCapturedPhoto = Notification.Name("shouldSaveCapturedPhoto")
 }

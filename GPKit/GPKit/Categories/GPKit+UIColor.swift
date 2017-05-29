@@ -10,7 +10,7 @@ import UIKit
 
 struct GPKitFlatColor {
     
-    /** V1.0.0 color scheme of FindWork - Black
+    /** Sample color. Extend to add your app's main theme colors.
      */
     
     static let orange = UIColor.colorWithRGBHex(0xFF4949)
