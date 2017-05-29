@@ -158,7 +158,7 @@ public extension UIViewController {
      Generates and shows an alertController with a native design
      */
     
-    func showAlert(
+    public func showAlert(
         title: String?,
         message: String?,
         okayButtonTitle: String,

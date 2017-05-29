@@ -11,7 +11,7 @@ public extension String {
     /** Identical to the extension of UITextField's hasValue()
      */
     
-    func hasValidValue() -> Bool {
+    public func hasValidValue() -> Bool {
         let whitespaceSet = CharacterSet.whitespaces
         
         if self == "" || self == " " {
@@ -29,14 +29,14 @@ public extension String {
     /** Clever function to add/append paths as strings just like in Firebase.
      */
     
-    func append(path: String) -> String {
+    public func append(path: String) -> String {
         return "\(self)\(path)"
     }
     
     /** Checks if the input email is valid or not
      */
     
-    func isValidEmail() -> Bool {
+    public func isValidEmail() -> Bool {
         
         let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)

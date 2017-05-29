@@ -13,14 +13,7 @@ class GPKitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let newVC = UIViewController()
-        newVC.showAlert(
-            title: "Test Title",
-            message: "New Message",
-            okayButtonTitle: "OK",
-            cancelButtonTitle: nil,
-            withBlock: nil
-        )
+
     }
     
     override func tearDown() {

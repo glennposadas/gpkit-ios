@@ -401,6 +401,7 @@
 				4518041B1EC2E80C008268B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

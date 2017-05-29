@@ -48,7 +48,6 @@
 		451804441EC31123008268B8 /* GPKit+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UITextField.swift"; sourceTree = "<group>"; };
 		451804451EC31123008268B8 /* GPKit+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIView.swift"; sourceTree = "<group>"; };
 		451804461EC31123008268B8 /* GPKit+UIViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIViewContorller.swift"; sourceTree = "<group>"; };
-		458849431ED6DFD600EAB977 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/TimeIn-cfeqtavkdgokzicpfbzhvvrqoanp/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		459BA5801EDBD66500A22001 /* GPKit+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Array.swift"; sourceTree = "<group>"; };
 		459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
 		459BA58B1EDBE4BD00A22001 /* GPKit+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+Error.swift"; sourceTree = "<group>"; };
@@ -101,7 +100,6 @@
 		458849421ED6DFD600EAB977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				458849431ED6DFD600EAB977 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
