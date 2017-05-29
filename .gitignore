@@ -27,7 +27,7 @@ build/
 *.xcworkspace
 !default.xcworkspace
 xcuserdata
-*.xcuserstate
+xcuserdata/*
 *.moved-aside
 DerivedData
 .idea/
