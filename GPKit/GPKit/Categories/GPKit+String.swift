@@ -6,18 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-import Alamofire
-
-extension String: ParameterEncoding {
-    
-    /** Encoding for service
-     */
-    
-    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
-        var request = try urlRequest.asURLRequest()
-        request.httpBody = data(using: .utf8, allowLossyConversion: false)
-        return request
-    }
+extension String {
     
     /** Identical to the extension of UITextField's hasValue()
      */
