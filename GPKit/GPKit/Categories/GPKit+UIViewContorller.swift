@@ -6,22 +6,25 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
+import UIKit
+
 public extension UIViewController {
     
     // MARK: - Properties
     
-    typealias GPKitAlertCallBack = (_ userDidTapOk: Bool) -> Void
+    public typealias GPKitAlertCallBack = (_ userDidTapOk: Bool) -> Void
     
     // MARK: - Shorter public functions
     
     /** Shorter syntax for popping view controllers
      */
     
-    func popVC() {
+    public func popVC() {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
-    func dismiss() {
+    public func dismiss() {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -30,15 +33,15 @@ public extension UIViewController {
     /** Status Bar Configuration
      */
     
-    func makeStatusBarLight() {
+    public func makeStatusBarLight() {
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
-    func makeStatusBarDark() {
+    public func makeStatusBarDark() {
         UIApplication.shared.statusBarStyle = .default
     }
     
-    func makeNavBarTransparent() {
+    public func makeNavBarTransparent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -49,7 +52,7 @@ public extension UIViewController {
         self.makeStatusBarDark()
     }
     
-    func makeNavBarTransparentWithoutBGImage() {
+    public func makeNavBarTransparentWithoutBGImage() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -59,7 +62,7 @@ public extension UIViewController {
         self.hideNavBar()
     }
     
-    func makeNavBarWhite() {
+    public func makeNavBarWhite() {
         self.navigationController?.navigationBar.isTranslucent = false
         let whiteImage = UIImage(color: .white)
         self.navigationController?.navigationBar.setBackgroundImage(whiteImage, for: .default)
@@ -71,7 +74,7 @@ public extension UIViewController {
         self.makeStatusBarDark()
     }
     
-    func makeNavBarBlack() {
+    public func makeNavBarBlack() {
         self.navigationController?.navigationBar.isTranslucent = false
         let blackImage = UIImage(color: .black)
         self.navigationController?.navigationBar.setBackgroundImage(blackImage, for: .default)
@@ -83,7 +86,7 @@ public extension UIViewController {
         self.makeStatusBarLight()
     }
     
-    func makeNavBarDefaultColor(color: UIColor, animated: Bool) {
+    public func makeNavBarDefaultColor(color: UIColor, animated: Bool) {
         
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -105,15 +108,15 @@ public extension UIViewController {
         }
     }
     
-    func showNavBar() {
+    public func showNavBar() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    func showNavBarAnimated() {
+    public func showNavBarAnimated() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    func hideNavBar() {
+    public func hideNavBar() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -122,11 +125,11 @@ public extension UIViewController {
     /** Configures the back button
      */
     
-    func setBackButtonVisible(animated: Bool) {
+    public func setBackButtonVisible(animated: Bool) {
         self.navigationItem.setHidesBackButton(false, animated: animated)
     }
     
-    func setBackButtonHidden(animated: Bool) {
+    public func setBackButtonHidden(animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated: animated)
     }
     
@@ -135,14 +138,14 @@ public extension UIViewController {
     /** Configures te logos of the nav bar
      */
     
-    func removeLogoTitleView() {
+    public func removeLogoTitleView() {
         self.navigationItem.titleView = nil
     }
     
     /** Sets the title with attributed string
      */
     
-    func setNavBarTitleWithAttributedString(title: String, color: UIColor, font: UIFont) {
+    public func setNavBarTitleWithAttributedString(title: String, color: UIColor, font: UIFont) {
         
         let titleLabel = UILabel()
         let attributes = [NSForegroundColorAttributeName: color,

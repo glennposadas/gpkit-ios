@@ -6,6 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public extension UITextField {
@@ -18,7 +19,7 @@ public extension UITextField {
      
      */
     
-    func hasContents() -> Bool {
+    public func hasContents() -> Bool {
         
         let whitespaceSet = CharacterSet.whitespaces
         
@@ -38,7 +39,7 @@ public extension UITextField {
      The function to be called for the alert.
      */
     
-    func setupTextFieldWithDelegate(
+    public func setupTextFieldWithDelegate(
         delegate: UITextFieldDelegate,
         textColor: UIColor,
         placeholderText: String?,
@@ -78,7 +79,7 @@ public extension UITextField {
      The function to setup a textField for any input type
      */
     
-    func setupTextFieldForInputType(inputType: UIKeyboardType) -> UITextField {
+    public func setupTextFieldForInputType(inputType: UIKeyboardType) -> UITextField {
         //self.font = R.font.gothamBook(size: 14.0)
         self.keyboardType = inputType
         

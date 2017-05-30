@@ -6,13 +6,14 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public extension UINavigationController {
     
     /// Used for finding a specific view under the navigationBar
     
-    func getView(withTag tag: Int) -> UIView? {
+    public func getView(withTag tag: Int) -> UIView? {
         let navigationBar = self.navigationBar
         
         for subView in navigationBar.subviews {
@@ -25,11 +26,11 @@ public extension UINavigationController {
         return nil
     }
     
-    func showSubtitle(title: String) {
+    public func showSubtitle(title: String) {
         self.navigationBar.topItem?.prompt = title
     }
     
-    func removeSubtitle() {
+    public func removeSubtitle() {
         self.navigationBar.topItem?.prompt = nil
     }
 }

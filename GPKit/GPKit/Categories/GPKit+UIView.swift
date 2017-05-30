@@ -6,6 +6,9 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
+import UIKit
+
 public enum RadiusSize: CGFloat {
     case smallAmount = 30.0
     case mediumAmount = 40.0
@@ -16,7 +19,7 @@ public enum RadiusSize: CGFloat {
 
 public extension UIView {
     
-    func makeRoundCornerLeft(radiusSize: RadiusSize) -> UIView {
+    public func makeRoundCornerLeft(radiusSize: RadiusSize) -> UIView {
         
         let path = UIBezierPath(roundedRect:self.bounds,
                                 byRoundingCorners:[.topLeft, .bottomLeft],
@@ -30,7 +33,7 @@ public extension UIView {
         return self
     }
     
-    func makeRoundCorners() -> UIView {
+    public func makeRoundCorners() -> UIView {
         self.layer.cornerRadius = self.frame.size.height / 2
         self.layer.masksToBounds = true
         self.clipsToBounds = true
@@ -39,7 +42,7 @@ public extension UIView {
         return self
     }
     
-    func addCornerRadius(radiusSize: RadiusSize) -> UIView {
+    public func addCornerRadius(radiusSize: RadiusSize) -> UIView {
         self.layer.cornerRadius = radiusSize.rawValue
         self.layer.masksToBounds = true
         self.clipsToBounds = true
@@ -47,7 +50,7 @@ public extension UIView {
         return self
     }
     
-    func addCornerRadius(
+    public func addCornerRadius(
         cornerRadius: CGFloat,
         borderColor: UIColor,
         borderWidth: CGFloat) -> UIView {
@@ -61,7 +64,7 @@ public extension UIView {
         return self
     }
     
-    func addShadowToSeparatorView() {
+    public func addShadowToSeparatorView() {
         let shadowPath = UIBezierPath(rect: self.bounds)
         
         self.layer.masksToBounds = false
@@ -70,7 +73,7 @@ public extension UIView {
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    func addDefaultShadow() {
+    public func addDefaultShadow() {
         let shadowPath = UIBezierPath(rect: self.bounds)
         
         self.layer.masksToBounds = false
@@ -79,21 +82,21 @@ public extension UIView {
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    func addShadowBottomRight() {
+    public func addShadowBottomRight() {
         self.layer.masksToBounds = false
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2.0
     }
     
-    func addShadowToCell() {
+    public func addShadowToCell() {
         self.layer.shadowOpacity = 0.7
         self.layer.shadowRadius = 1.0
         self.layer.shadowOffset = CGSize(width: 0, height: 0);
         self.layer.shadowColor = UIColor.black.cgColor
     }
         
-    func shake() {
+    public func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 0.6

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class GPKitError {
     public static func newError(description: String, code: Int = -1) -> Error {

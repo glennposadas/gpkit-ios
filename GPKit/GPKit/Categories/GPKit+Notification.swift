@@ -6,9 +6,10 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public extension Notification.Name {
-    static let shouldPresentAuth = Notification.Name("shouldPresentAuth")
-    static let shouldPresentHome = Notification.Name("shouldPresentHome")
+    public static let shouldPresentAuth = Notification.Name("shouldPresentAuth")
+    public static let shouldPresentHome = Notification.Name("shouldPresentHome")
 }

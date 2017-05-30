@@ -6,11 +6,12 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public extension UIImage {
     
-    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         color.setFill()
@@ -22,7 +23,7 @@ public extension UIImage {
         self.init(cgImage: cgImage)
     }
     
-    func normalizeImage() -> UIImage {
+    public func normalizeImage() -> UIImage {
         if self.imageOrientation == UIImageOrientation.up {
             return self
         }
@@ -36,7 +37,7 @@ public extension UIImage {
         return normalizedImage
     }
     
-    func imageWithColor(color1: UIColor) -> UIImage {
+    public func imageWithColor(color1: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         color1.setFill()
         
@@ -55,7 +56,7 @@ public extension UIImage {
         return newImage
     }
     
-    func isEqualToImage(image: UIImage) -> Bool {
+    public func isEqualToImage(image: UIImage) -> Bool {
         if let data1 = UIImagePNGRepresentation(self) as NSData?,
             let data2 = UIImagePNGRepresentation(image) as NSData? {
             return data1.isEqual(data2)

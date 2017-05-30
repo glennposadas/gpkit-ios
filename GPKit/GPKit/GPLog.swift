@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /** Public function to use for logging.
  *  Merely an extension of Apple's print.

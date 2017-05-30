@@ -6,6 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public struct GPKitFlatColor {
@@ -13,11 +14,11 @@ public struct GPKitFlatColor {
     /** Sample color. Extend to add your app's main theme colors.
      */
     
-    static let orange = UIColor.colorWithRGBHex(0xFF4949)
+    public static let orange = UIColor.colorWithRGBHex(0xFF4949)
 }
 
 public extension UIColor {
-    class func colorWithRGBHex(_ hex: Int, alpha: Float = 1.0) -> UIColor {
+    public class func colorWithRGBHex(_ hex: Int, alpha: Float = 1.0) -> UIColor {
         let r = Float((hex >> 16) & 0xFF)
         let g = Float((hex >> 8) & 0xFF)
         let b = Float((hex) & 0xFF)

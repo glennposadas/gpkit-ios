@@ -6,10 +6,11 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 public extension Array where Element: Equatable {
-    mutating func prependUniqueObj(object: Iterator.Element) {
+    public mutating func prependUniqueObj(object: Iterator.Element) {
         if contains(object) == false {
             insert(object, at: 0)
         }

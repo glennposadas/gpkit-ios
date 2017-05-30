@@ -6,6 +6,9 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import Foundation
+import UIKit
+
 public extension String {
     
     /** Identical to the extension of UITextField's hasValue()
@@ -49,7 +52,7 @@ public extension String {
      *  Returns: String: "Jan 2017"
      */
     
-    func convertToReadableDateFormat() -> String {
+    public func convertToReadableDateFormat() -> String {
         let dateFormatter = DateFormatter()
         let geoDriveDateFormatter = DateFormatter()
         
@@ -64,7 +67,7 @@ public extension String {
     /** Extract month from a string
      */
     
-    func extractMonth() -> String {
+    public func extractMonth() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -84,7 +87,7 @@ public extension String {
     /** Extract year from a string
      */
     
-    func extractYear() -> String {
+    public func extractYear() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -101,14 +104,14 @@ public extension String {
      *  January --> "1"
      */
     
-    func convertMonthSymbolToInt() -> String {
+    public func convertMonthSymbolToInt() -> String {
         return "\(DateFormatter().monthSymbols.index(of: self)! + 1)"
     }
     
     /** Generates random alphanumeric string for image key
      */
     
-    static func random(length: Int = 20) -> String {
+    public static func random(length: Int = 20) -> String {
         let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString: String = ""
         
@@ -125,7 +128,7 @@ public class GPKitString {
     /** Returns the cool format for Date and Time now.
      */
     
-    class func dateTimeNowString() -> String {
+    public class func dateTimeNowString() -> String {
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = DateFormatter.Style.short
         dateformatter.timeStyle = DateFormatter.Style.short
