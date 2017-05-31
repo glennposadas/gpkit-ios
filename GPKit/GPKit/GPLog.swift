@@ -14,9 +14,7 @@ import UIKit
  */
 
 public func GPLog(classSender: Any, log: String) {
-    #if DEBUG
-        print("\(typeName(classSender)) \(Date()): -- \(log)")
-    #endif
+    print("\(typeName(classSender)) \(Date()): -- \(log)")
 }
 
 private func typeName(_ some: Any) -> String {
