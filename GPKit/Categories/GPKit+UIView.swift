@@ -12,6 +12,7 @@ import UIKit
 public enum RadiusSize: CGFloat {
     case smallAmount = 30.0
     case mediumAmount = 40.0
+    case buttonAmount = 22.0 // The recommended button height is 44. Half of it is the buttonAmount
     case largeAmount = 50.0
     case slideShowCornerAmount = 10.0 // amuount of edge.
     case edgeAmount = 3.0 // amount for the view's edge only.
