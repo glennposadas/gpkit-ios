@@ -42,7 +42,8 @@ public extension UITextField {
     public func setupTextFieldWithDelegate(
         delegate: UITextFieldDelegate,
         textColor: UIColor,
-        placeholderText: String?,
+        font: UIFont? = nil,
+        placeholderText: String? = nil,
         imageIcon: UIImage?) -> UITextField {
         
         // The half of the height of the superview, which is the textField minus half of the height of imageView
@@ -64,6 +65,10 @@ public extension UITextField {
         self.delegate = delegate
         
         self.addSubview(imageView)
+        
+        if let font = font {
+            self.font = font
+        }
         
         if let placeHolder = placeholderText {
             let localizedPlaceHolder = NSLocalizedString(placeHolder, comment: "")
