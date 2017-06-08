@@ -150,6 +150,18 @@ public extension UIViewController {
         self.navigationItem.titleView = nil
     }
     
+    public func setNavBarTitle(image: UIImage, navBarTintColor: UIColor) {
+        self.navigationController?.navigationBar.tintColor = navBarTintColor
+        
+        let gpKitBundle = Bundle(identifier: "ph.cituslabs.app.gpkit")
+        if let gpTitleView = UINib(nibName: "GPTitleView", bundle: gpKitBundle).instantiate(withOwner: nil, options: nil)[0]
+            as? GPTitleView {
+            
+            gpTitleView.image_Title.image = image
+            self.navigationItem.titleView = gpTitleView
+        }
+    }
+    
     /** Sets the title with attributed string
      */
     
