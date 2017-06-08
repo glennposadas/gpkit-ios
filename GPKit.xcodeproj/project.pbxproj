@@ -27,6 +27,7 @@
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
 		45A00C2D1EBD16C1001BC817 /* GPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A00C1F1EBD16C0001BC817 /* GPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A53C641EE7C767001FAE8B /* GPJSONReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		45A00C251EBD16C1001BC817 /* GPKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPKitTests.swift; sourceTree = "<group>"; };
 		45A00C2C1EBD16C1001BC817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A53C641EE7C767001FAE8B /* GPJSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPJSONReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				45A00C1F1EBD16C0001BC817 /* GPKit.h */,
 				45A00C201EBD16C0001BC817 /* Info.plist */,
 				451803F81EC2BC99008268B8 /* GPLog.swift */,
+				45A53C641EE7C767001FAE8B /* GPJSONReader.swift */,
 			);
 			path = GPKit;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45435CF51EE50A350015B3B4 /* GPKit+UIView.swift in Sources */,
+				45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */,
 				451803F91EC2BC99008268B8 /* GPLog.swift in Sources */,
 				45435CF21EE50A350015B3B4 /* GPKit+UIImage.swift in Sources */,
 				45435CEE1EE50A350015B3B4 /* GPKit+Sequence.swift in Sources */,

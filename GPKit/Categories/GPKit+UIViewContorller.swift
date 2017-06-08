@@ -33,6 +33,14 @@ public extension UIViewController {
     /** Status Bar Configuration
      */
     
+    public func showStatusBar() {
+        UIApplication.shared.isStatusBarHidden = false
+    }
+    
+    public func hideStatusBar() {
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
     public func makeStatusBarLight() {
         UIApplication.shared.statusBarStyle = .lightContent
     }
