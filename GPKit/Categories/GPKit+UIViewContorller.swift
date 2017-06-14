@@ -13,6 +13,7 @@ public extension UIViewController {
     
     // MARK: - Properties
     
+    public typealias GPKitAlertControllerCallBack = (_ sourceType: UIImagePickerControllerSourceType) -> Void
     public typealias GPKitAlertCallBack = (_ userDidTapOk: Bool) -> Void
     
     // MARK: - Shorter public functions
@@ -182,10 +183,10 @@ public extension UIViewController {
      */
     
     public func showAlert(
-        title: String?,
-        message: String?,
+        title: String,
+        message: String? = nil,
         okayButtonTitle: String,
-        cancelButtonTitle: String?,
+        cancelButtonTitle: String? = nil,
         withBlock completion: @escaping GPKitAlertCallBack) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -206,4 +207,46 @@ public extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    
+    // MARK: - AlertController for Image Picker and Camera Source
+    
+    public func showAlertControllerForPhoto(sourceView: UIView, tintColor: UIColor, withBlock completion: @escaping GPKitAlertControllerCallBack) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // provide the view source
+        alertController.popoverPresentationController?.sourceView = sourceView
+        alertController.popoverPresentationController?.sourceRect = sourceView.bounds
+        alertController.view.tintColor = tintColor
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
+                _ in
+                
+                alertController.view.tintColor = tintColor
+                completion(.camera)
+                
+            })
+            
+            alertController.addAction(cameraAction)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
+                _ in
+                
+                alertController.view.tintColor = tintColor
+                completion(.photoLibrary)
+                
+            })
+            
+            alertController.addAction(photoLibraryAction)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
 }

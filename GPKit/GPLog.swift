@@ -13,8 +13,8 @@ import UIKit
  *  Merely an extension of Apple's print.
  */
 
-public func GPLog(classSender: Any, log: String) {
-    print("GPKit🐞🐞🐞 -- \(typeName(classSender)) \(Date()): -- \(log)")
+public func GPLog(classSender: Any, log: String?) {
+    print("GPKit🐞🐞🐞 -- \(typeName(classSender)) \(Date()): -- \(String(describing: log))")
 }
 
 private func typeName(_ some: Any) -> String {
