@@ -151,6 +151,23 @@ public extension UIViewController {
         self.navigationItem.titleView = nil
     }
     
+    /** Sets the navbar title with image and feedback from the button.
+     *  Will call delegate if the navbar title is tapped.
+     */
+    
+    public func setNavBarTitleWithFeedback(image: UIImage, navBarTintColor: UIColor) {
+        self.navigationController?.navigationBar.tintColor = navBarTintColor
+        
+        let gpKitBundle = Bundle(identifier: "ph.cituslabs.app.gpkit")
+        if let gpTitleView = UINib(nibName: "GPTitleView", bundle: gpKitBundle).instantiate(withOwner: nil, options: nil)[0]
+            as? GPTitleView {
+            
+            gpTitleView.delegate = self as? GPTitleViewDelegate
+            gpTitleView.image_Title.image = image
+            self.navigationItem.titleView = gpTitleView
+        }
+    }
+    
     public func setNavBarTitle(image: UIImage, navBarTintColor: UIColor) {
         self.navigationController?.navigationBar.tintColor = navBarTintColor
         
