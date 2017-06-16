@@ -20,49 +20,55 @@ public enum RadiusSize: CGFloat {
 
 public extension UIView {
     
-    public func makeRoundCornerLeft(radiusSize: RadiusSize) -> UIView {
+    public func makeRoundCornerLeft(radiusSize: RadiusSize) {
         
-        let path = UIBezierPath(roundedRect:self.bounds,
-                                byRoundingCorners:[.topLeft, .bottomLeft],
-                                cornerRadii: CGSize(width: radiusSize.rawValue, height:  radiusSize.rawValue))
+        let path = UIBezierPath(
+            roundedRect:self.bounds,
+            byRoundingCorners:[.topLeft, .bottomLeft],
+            cornerRadii: CGSize(width: radiusSize.rawValue, height:  radiusSize.rawValue)
+        )
         
         let maskLayer = CAShapeLayer()
         
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
-        
-        return self
     }
     
-    public func makeRoundCorners() -> UIView {
+    public func makeRoundCorners() {
         self.layer.cornerRadius = self.frame.size.height / 2
         self.layer.masksToBounds = true
         self.clipsToBounds = true
         self.layer.borderWidth = 0
-        
-        return self
     }
     
-    public func addCornerRadius(radiusSize: RadiusSize) -> UIView {
+    public func addCornerRadius(radiusSize: RadiusSize) {
         self.layer.cornerRadius = radiusSize.rawValue
         self.layer.masksToBounds = true
         self.clipsToBounds = true
+    }
+    
+    public func addCornerRadius(
+        radiusSize: RadiusSize,
+        borderColor: UIColor,
+        borderWidth: CGFloat) {
         
-        return self
+        self.layer.cornerRadius = radiusSize.rawValue
+        self.layer.masksToBounds = true
+        self.clipsToBounds = true
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor.cgColor
     }
     
     public func addCornerRadius(
         cornerRadius: CGFloat,
         borderColor: UIColor,
-        borderWidth: CGFloat) -> UIView {
+        borderWidth: CGFloat) {
         
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
         self.clipsToBounds = true
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
-        
-        return self
     }
     
     public func addShadowToSeparatorView() {
@@ -96,7 +102,7 @@ public extension UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: 0);
         self.layer.shadowColor = UIColor.black.cgColor
     }
-        
+    
     public func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)

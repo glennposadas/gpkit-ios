@@ -14,7 +14,7 @@ import UIKit
  */
 
 public func GPLog(classSender: Any, log: String?) {
-    print("GPKit🐞🐞🐞 -- \(typeName(classSender)) \(Date()): -- \(String(describing: log))")
+    print("GPKit🐞🐞🐞 -- \(typeName(classSender)) \(Date()): -- \(log ?? "Nil")")
 }
 
 private func typeName(_ some: Any) -> String {

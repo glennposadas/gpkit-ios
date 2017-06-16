@@ -44,7 +44,7 @@ public extension UITextField {
         textColor: UIColor,
         font: UIFont? = nil,
         placeholderText: String? = nil,
-        imageIcon: UIImage?) -> UITextField {
+        imageIcon: UIImage?) {
         
         // The half of the height of the superview, which is the textField minus half of the height of imageView
         let y = 19.0 - 7.5
@@ -76,15 +76,13 @@ public extension UITextField {
                                                       attributes: [NSForegroundColorAttributeName: textColor])
             self.attributedPlaceholder = attributedString
         }
-        
-        return self
     }
     
     /**
      The function to setup a textField for any input type
      */
     
-    public func setupTextFieldForInputType(inputType: UIKeyboardType) -> UITextField {
+    public func setupTextFieldForInputType(inputType: UIKeyboardType) {
         //self.font = R.font.gothamBook(size: 14.0)
         self.keyboardType = inputType
         
@@ -101,7 +99,5 @@ public extension UITextField {
             self.spellCheckingType = .no
             self.autocorrectionType = .no
         }
-        
-        return self
     }
 }
