@@ -30,6 +30,7 @@
 		45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A53C641EE7C767001FAE8B /* GPJSONReader.swift */; };
 		45AFBF831EE9A12300396D8D /* GPTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AFBF821EE9A12300396D8D /* GPTitleView.xib */; };
 		45AFBF851EE9A14000396D8D /* GPTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFBF841EE9A14000396D8D /* GPTitleView.swift */; };
+		45E6290D1EF50B5600BD34ED /* GPNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6290C1EF50B5600BD34ED /* GPNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		45A53C641EE7C767001FAE8B /* GPJSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPJSONReader.swift; sourceTree = "<group>"; };
 		45AFBF821EE9A12300396D8D /* GPTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTitleView.xib; sourceTree = "<group>"; };
 		45AFBF841EE9A14000396D8D /* GPTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTitleView.swift; sourceTree = "<group>"; };
+		45E6290C1EF50B5600BD34ED /* GPNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				45A00C201EBD16C0001BC817 /* Info.plist */,
 				451803F81EC2BC99008268B8 /* GPLog.swift */,
 				45A53C641EE7C767001FAE8B /* GPJSONReader.swift */,
+				45E6290C1EF50B5600BD34ED /* GPNotification.swift */,
 			);
 			path = GPKit;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				45435CEA1EE50A350015B3B4 /* GPKit+DispatchQueue.swift in Sources */,
 				45435CEB1EE50A350015B3B4 /* GPKit+Double.swift in Sources */,
 				45435CF11EE50A350015B3B4 /* GPKit+UIDevice.swift in Sources */,
+				45E6290D1EF50B5600BD34ED /* GPNotification.swift in Sources */,
 				45435CED1EE50A350015B3B4 /* GPKit+Notification.swift in Sources */,
 				45435CF41EE50A350015B3B4 /* GPKit+UITextField.swift in Sources */,
 				45435CE81EE50A350015B3B4 /* GPKit+Array.swift in Sources */,
