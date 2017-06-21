@@ -50,6 +50,27 @@ public extension UIViewController {
         UIApplication.shared.statusBarStyle = .default
     }
     
+    /** Navigation Bar Configuration
+     */
+    
+    public func hideBackButton() {
+        self.navigationController?.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    public func hideBackButtonForTabBarController() {
+        self.tabBarController?.navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    public func setupNavBarTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
+        var attributes: [String : Any] = [NSFontAttributeName : font]
+        
+        if let textColor = textColor {
+            attributes[NSForegroundColorAttributeName] = textColor
+        }
+        
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+    }
+    
     public func makeNavBarTransparent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -71,6 +92,7 @@ public extension UIViewController {
         self.hideNavBar()
     }
     
+    @available(*, deprecated, message: "Use makeNavBarColor(color: UIColor, itemsTintColor: UIColor)")
     public func makeNavBarWhite() {
         self.navigationController?.navigationBar.isTranslucent = false
         let whiteImage = UIImage(color: .white)
@@ -83,6 +105,7 @@ public extension UIViewController {
         self.makeStatusBarDark()
     }
     
+    @available(*, deprecated, message: "Use makeNavBarColor(color: UIColor, itemsTintColor: UIColor)")
     public func makeNavBarBlack() {
         self.navigationController?.navigationBar.isTranslucent = false
         let blackImage = UIImage(color: .black)
@@ -93,6 +116,17 @@ public extension UIViewController {
         
         self.navigationController?.navigationBar.tintColor = .white
         self.makeStatusBarLight()
+    }
+    
+    public func makeNavBarColor(color: UIColor, itemsTintColor: UIColor) {
+        self.navigationController?.navigationBar.isTranslucent = false
+        let colorImage = UIImage(color: color)
+        self.navigationController?.navigationBar.setBackgroundImage(colorImage, for: .default)
+        self.navigationController?.navigationBar.barTintColor = color
+        self.navigationController?.navigationBar.backgroundColor = color
+        self.navigationController?.view.backgroundColor = color
+        
+        self.navigationController?.navigationBar.tintColor = itemsTintColor
     }
     
     public func makeNavBarDefaultColor(color: UIColor, animated: Bool) {
@@ -115,6 +149,10 @@ public extension UIViewController {
             self.navigationController?.navigationBar.isTranslucent = false
             self.navigationController?.navigationBar.backgroundColor = color
         }
+    }
+    
+    public func makeNavBarItemsTintColor(color: UIColor) {
+        self.navigationController?.navigationBar.tintColor = color
     }
     
     public func showNavBar() {
@@ -265,5 +303,5 @@ public extension UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-
+    
 }

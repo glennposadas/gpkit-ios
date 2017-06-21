@@ -23,6 +23,7 @@
 		45435CF41EE50A350015B3B4 /* GPKit+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE51EE50A350015B3B4 /* GPKit+UITextField.swift */; };
 		45435CF51EE50A350015B3B4 /* GPKit+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE61EE50A350015B3B4 /* GPKit+UIView.swift */; };
 		45435CF61EE50A350015B3B4 /* GPKit+UIViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE71EE50A350015B3B4 /* GPKit+UIViewContorller.swift */; };
+		456893D31EFA9B64008308EF /* GPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456893D21EFA9B64008308EF /* GPCountry.swift */; };
 		459BA5861EDBD6C300A22001 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */; };
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
@@ -31,6 +32,7 @@
 		45AFBF831EE9A12300396D8D /* GPTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AFBF821EE9A12300396D8D /* GPTitleView.xib */; };
 		45AFBF851EE9A14000396D8D /* GPTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFBF841EE9A14000396D8D /* GPTitleView.swift */; };
 		45E6290D1EF50B5600BD34ED /* GPNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6290C1EF50B5600BD34ED /* GPNotification.swift */; };
+		45F54A451EF9A92C00935C9E /* GPKit+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F54A441EF9A92C00935C9E /* GPKit+UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		45435CE51EE50A350015B3B4 /* GPKit+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UITextField.swift"; sourceTree = "<group>"; };
 		45435CE61EE50A350015B3B4 /* GPKit+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIView.swift"; sourceTree = "<group>"; };
 		45435CE71EE50A350015B3B4 /* GPKit+UIViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIViewContorller.swift"; sourceTree = "<group>"; };
+		456893D21EFA9B64008308EF /* GPCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCountry.swift; sourceTree = "<group>"; };
 		459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
 		45A00C1C1EBD16C0001BC817 /* GPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A00C1F1EBD16C0001BC817 /* GPKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPKit.h; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		45AFBF821EE9A12300396D8D /* GPTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTitleView.xib; sourceTree = "<group>"; };
 		45AFBF841EE9A14000396D8D /* GPTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTitleView.swift; sourceTree = "<group>"; };
 		45E6290C1EF50B5600BD34ED /* GPNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNotification.swift; sourceTree = "<group>"; };
+		45F54A441EF9A92C00935C9E /* GPKit+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPKit+UIButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				45435CD91EE50A350015B3B4 /* GPKit+Array.swift */,
+				45F54A441EF9A92C00935C9E /* GPKit+UIButton.swift */,
 				45435CDA1EE50A350015B3B4 /* GPKit+Date.swift */,
 				45435CDB1EE50A350015B3B4 /* GPKit+DispatchQueue.swift */,
 				45435CDC1EE50A350015B3B4 /* GPKit+Double.swift */,
@@ -158,6 +163,7 @@
 				45A00C1F1EBD16C0001BC817 /* GPKit.h */,
 				45A00C201EBD16C0001BC817 /* Info.plist */,
 				451803F81EC2BC99008268B8 /* GPLog.swift */,
+				456893D21EFA9B64008308EF /* GPCountry.swift */,
 				45A53C641EE7C767001FAE8B /* GPJSONReader.swift */,
 				45E6290C1EF50B5600BD34ED /* GPNotification.swift */,
 			);
@@ -297,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45435CF51EE50A350015B3B4 /* GPKit+UIView.swift in Sources */,
+				45F54A451EF9A92C00935C9E /* GPKit+UIButton.swift in Sources */,
 				45AFBF851EE9A14000396D8D /* GPTitleView.swift in Sources */,
 				45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */,
 				451803F91EC2BC99008268B8 /* GPLog.swift in Sources */,
@@ -308,6 +315,7 @@
 				45435CEC1EE50A350015B3B4 /* GPKit+Error.swift in Sources */,
 				45435CEA1EE50A350015B3B4 /* GPKit+DispatchQueue.swift in Sources */,
 				45435CEB1EE50A350015B3B4 /* GPKit+Double.swift in Sources */,
+				456893D31EFA9B64008308EF /* GPCountry.swift in Sources */,
 				45435CF11EE50A350015B3B4 /* GPKit+UIDevice.swift in Sources */,
 				45E6290D1EF50B5600BD34ED /* GPNotification.swift in Sources */,
 				45435CED1EE50A350015B3B4 /* GPKit+Notification.swift in Sources */,
