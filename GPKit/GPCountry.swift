@@ -17,7 +17,17 @@ public enum SortCountriesOption {
     case dialingCode
 }
 
-public class GPCountry {
+public class GPCountry: NSObject {
+    
+    public var name: String
+    public var countryCode: String
+    public var dialCode: String
+    
+    init(name: String, countryCode: String, dialCode: String) {
+        self.name = name
+        self.countryCode = countryCode
+        self.dialCode = dialCode
+    }
     
     private static let countryData =  [
         "AF": ["Afghanistan","93"],
@@ -269,18 +279,57 @@ public class GPCountry {
         "ZM": ["Zambia","260"],
         "ZW": ["Zimbabwe","263"]]
     
-    /** Functions
+    
+    /** Public Functions
+     */
+    
+    // Equals
+    public static func == (lhs: GPCountry, rhs: GPCountry) -> Bool {
+        return lhs.countryCode == rhs.countryCode
+    }
+    
+    /** Returns array of GPCountry
+     */
+    
+    public class func getCountryObjects(sortCountriesOption: SortCountriesOption) -> [GPCountry] {
+        var countries = [GPCountry]()
+        
+        // sort by name
+        let sortedCountryData = countryData.sorted(by: { $0.value.first! < $1.value.first! })
+        
+        // map
+        _ = sortedCountryData.map {
+            countries.append(GPCountry(name: $0.value.first!, countryCode: $0.key, dialCode: $0.value[1]))
+        }
+        
+        return countries
+    }
+    
+    /** Returns the index of the country code.
+     */
+    
+    public class func getIndexOfCountry(countryCode: String, in countries: [GPCountry]) -> Int {
+        for (index, country) in countries.enumerated() {
+            if country.countryCode == countryCode {
+                return index
+            }
+        }
+        
+        return 0
+    }
+    
+    /** Returns list of country names in [String]
      */
     
     public class func getSortedCountriesBy(sortCountriesOption: SortCountriesOption) -> [String] {
-        
-        let sortedCountryData = sortCountriesOption == .countryName ?
-            countryData.sorted(by: { $0.value.first! < $1.value.first! }) : countryData.sorted(by: { $0.value.first! < $1.value.first! })
-        
-        return sortedCountryData.map { $0.value.first! }
+        return GPCountry.getSortedCountryData(sortCountriesOption: sortCountriesOption).map { $0.value.first! }
     }
     
-    public class func getCountryNameBy(countryCode: String) -> String? {
-        return countryData[countryCode]?.first
+    /** Private functions
+     */
+    
+    private class func getSortedCountryData(sortCountriesOption: SortCountriesOption) -> [(key: String, value: Array<String>)] {
+        return sortCountriesOption == .countryName ?
+            countryData.sorted(by: { $0.value.first! < $1.value.first! }) : countryData.sorted(by: { $0.value.first! < $1.value.first! })
     }
 }
