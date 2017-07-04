@@ -47,6 +47,19 @@ public extension String {
         
     }
     
+    /** Handles string conversion into the usual default format of the MySQL Database.
+     *  @params Self = string of date (e.g. 2017-04-11 13:21:05)
+     *  @return Date = 2017-04-11 13:21:05
+     */
+    
+    public func convertToDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let date = dateFormatter.date(from: self)
+        return date
+    }
+    
     /** Handles date formatiing from String to String
      *  Input: Self. Ex: "2017-01-11 07:10:36"
      *  Returns: String: "Jan 2017"

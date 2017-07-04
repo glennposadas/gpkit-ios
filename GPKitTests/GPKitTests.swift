@@ -17,8 +17,16 @@ class GPKitTests: XCTestCase {
     }
     
     func testCountryForCountryObjects() {
-        let nilCountry = Country(name: "nil", countryCode: "nil", dialCode: "nil")
-        let countries = GPCountry.getCountryObjects()
+        let countries = GPCountry.getCountryObjects(sortCountriesOption: .countryName)
         XCTAssertFalse(countries.count == 0)
+    }
+    
+    func testCountDays() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let date = dateFormatter.date(from: "2017-07-07")!
+        
+        GPLog(classSender: self, log: "date: \(date)")
     }
 }

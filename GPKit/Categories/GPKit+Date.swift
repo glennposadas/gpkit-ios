@@ -6,9 +6,9 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-extension Date {
+public extension Date {
     
-    func dateAt(hours: Int, minutes: Int) -> Date {
+    public func dateAt(hours: Int, minutes: Int) -> Date {
         let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
         
         //get the month/day/year componentsfor today's date.
@@ -32,7 +32,7 @@ extension Date {
      *  @returns true if saturday or sunday. Otherwise, false.
      */
     
-    func isWeekend() -> Bool {
+    public func isWeekend() -> Bool {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         
@@ -46,5 +46,22 @@ extension Date {
         }
         
         return true
+    }
+    
+    /** Function used to count the days from today to self.
+     *  Date format accepted: yyyy-MM-dd HH:mm:ss
+     */
+    
+    public func countDaysFromToday() -> Int? {
+        let calendar = Calendar.current
+        
+        let now = Date()
+        
+        let date1 = calendar.startOfDay(for: now)
+        let date2 = calendar.startOfDay(for: self)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        
+        return components.day
     }
 }

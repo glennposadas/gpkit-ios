@@ -47,7 +47,7 @@ public extension UITextField {
         imageIcon: UIImage?) {
         
         // The half of the height of the superview, which is the textField minus half of the height of imageView
-        let y = 19.0 - 7.5
+        let y = (self.frame.size.height / 2) - 7.5
         
         let imageView = UIImageView(frame: CGRect(x: 15, y: y, width: 15, height: 15))
         
