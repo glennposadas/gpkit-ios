@@ -31,7 +31,7 @@ public extension UIButton {
     }
     
     /** Function used to indicate loading process by adding an acitivity indicator to a button.
-     *  NOTE: Should revert the button's normal state upon removing the loading state
+     *  NOTE: Make sure to revert back the state and properties of the button. Such as title.
      */
     
     public func setProcessing(_ processing: Bool, color: UIColor? = .gray) {
@@ -87,4 +87,6 @@ public extension UIButton {
         }
     }
     
+    /** TODO: Add selected state by adding a transluscent view
+     */
 }
