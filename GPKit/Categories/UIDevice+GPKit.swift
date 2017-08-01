@@ -1,5 +1,5 @@
 //
-//  GPKit+UIDevice.swift
+//  UIDevice+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/28/17.
@@ -8,6 +8,23 @@
 
 import UIKit
 
+public enum GPDevice: String {
+    case iPhone4        = "iPhone 4"
+    case iPhone4s       = "iPhone 4s"
+    case iPhone5        = "iPhone 5"
+    case iPhone5c       = "iPhone 5c"
+    case iPhone5s       = "iPhone 5s"
+    case iPhone6        = "iPhone 6"
+    case iPhone6plus    = "iPhone 6 Plus"
+    case iPhone6s       = "iPhone 6s"
+    case iPhone6sPlus   = "iPhone 6s Plus"
+    case iPhoneSE       = "iPhone SE"
+    case iPhone7        = "iPhone 7"
+    case iPhone7plus    = "iPhone 7 Plus"
+}
+
+/** Call: UIDevice.current.modelName
+ */
 
 public extension UIDevice {
     var modelName: String {

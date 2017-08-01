@@ -1,5 +1,5 @@
 //
-//  GPKit+Date.swift
+//  Date+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/28/17.

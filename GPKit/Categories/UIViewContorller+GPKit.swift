@@ -1,5 +1,5 @@
 //
-//  GPKit+UIViewContorller.swift
+//  UIViewContorller+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.
@@ -303,5 +303,4 @@ public extension UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
 }

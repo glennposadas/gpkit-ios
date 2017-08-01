@@ -1,5 +1,5 @@
 //
-//  GPKit+Error.swift
+//  Error+GPKit.swift
 //  TimeIn
 //
 //  Created by Glenn Posadas on 5/25/17.

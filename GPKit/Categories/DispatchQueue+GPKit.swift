@@ -1,5 +1,5 @@
 //
-//  GPKit+DispatchQueue.swift
+//  DispatchQueue+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/28/17.

@@ -1,5 +1,5 @@
 //
-//  GPKit+Array.swift
+//  Array+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/29/17.

@@ -1,5 +1,5 @@
 //
-//  GPKit+UIButton.swift
+//  UIButton+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 6/21/17.

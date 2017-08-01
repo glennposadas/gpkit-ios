@@ -1,5 +1,5 @@
 //
-//  GPKit+Notification.swift
+//  Notification+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.

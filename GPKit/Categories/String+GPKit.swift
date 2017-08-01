@@ -1,5 +1,5 @@
 //
-//  GPKit+String.swift
+//  String+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.
@@ -106,6 +106,22 @@ public extension String {
         
         if let myDate = dateFormatter.date(from: self) {
             dateFormatter.dateFormat = "yyyy"
+            let finalDate = dateFormatter.string(from: myDate)
+            return finalDate
+        }
+        
+        return ""
+    }
+    
+    /** Extract readable date string from a string
+     */
+    
+    public func extractReableDashDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        if let myDate = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "dd/MM/yyyy"
             let finalDate = dateFormatter.string(from: myDate)
             return finalDate
         }

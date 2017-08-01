@@ -1,5 +1,5 @@
 //
-//  GPKit+UIImage.swift
+//  UIImage+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.

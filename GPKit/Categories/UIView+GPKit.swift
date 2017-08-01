@@ -1,5 +1,5 @@
 //
-//  GPKit+UIView.swift
+//  UIView+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.
@@ -58,32 +58,11 @@ public extension UIView {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
     }
-
-    // TODO: Fix -
-    
-    public func addCornerRadiusToCorners(
-        _ corners: UIRectCorner,
-        cornerRadius: CGFloat,
-        borderColor: UIColor,
-        borderWidth: CGFloat) {
-        
-//        self.layer.masksToBounds = true
-//        self.clipsToBounds = true
-        self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor.cgColor
-        
-        let size = CGSize(width: cornerRadius, height: cornerRadius)
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: size)
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
-        
-    }
     
     public func addCornerRadius(
-        cornerRadius: CGFloat,
-        borderColor: UIColor,
-        borderWidth: CGFloat) {
+        _ cornerRadius: CGFloat,
+        borderColor: UIColor = .clear,
+        borderWidth: CGFloat = 0) {
         
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true

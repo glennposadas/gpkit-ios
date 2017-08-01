@@ -1,5 +1,5 @@
 //
-//  GPKit+UITextField.swift
+//  UITextField+GPKit.swift
 //  GPKit
 //
 //  Created by Glenn Posadas on 5/10/17.
@@ -10,7 +10,22 @@ import Foundation
 import UIKit
 
 public extension UITextField {
-
+    
+    func selectedRange() -> NSRange? {
+        let beginning = self.beginningOfDocument
+        let selectedRange = self.selectedTextRange
+        
+        if let selectionStart = selectedRange?.start,
+            let selectionEnd = selectedRange?.end {
+            let location = self.offset(from: beginning, to: selectionStart)
+            let length = self.offset(from: selectionStart, to: selectionEnd)
+            
+            return NSMakeRange(location, length)
+        }
+        
+        return nil
+    }
+    
     /**
      
      - Validation for TextFields.
@@ -40,7 +55,7 @@ public extension UITextField {
      */
     
     public func setupTextFieldWithDelegate(
-        delegate: UITextFieldDelegate,
+        delegate: UITextFieldDelegate? = nil,
         textColor: UIColor,
         font: UIFont? = nil,
         placeholderText: String? = nil,
@@ -62,7 +77,15 @@ public extension UITextField {
         
         self.leftViewMode = .always
         self.textColor = textColor
-        self.delegate = delegate
+        self.tintColor = textColor
+        
+        for subview in self.subviews {
+            subview.tintColor = textColor
+        }
+        
+        if let delegate = delegate {
+            self.delegate = delegate
+        }
         
         self.addSubview(imageView)
         
