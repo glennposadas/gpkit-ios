@@ -150,6 +150,13 @@ public extension String {
         }
         return randomString
     }
+    
+    public var removedFirstCharacter: String {
+        mutating get {
+            self.remove(at: self.startIndex)
+            return self
+        }
+    }
 }
 
 public class GPKitString {
