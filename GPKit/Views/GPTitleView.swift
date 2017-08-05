@@ -13,6 +13,7 @@ import UIKit
 
 @objc public protocol GPTitleViewDelegate: NSObjectProtocol {
     @objc optional func gpTitleView(userDidTapTitleView gpTitleView: GPTitleView)
+    @objc optional func gpTitleView(userDidFinishLongPress gpTitleView: GPTitleView)
 }
 
 public class GPTitleView: UIView {
@@ -25,6 +26,10 @@ public class GPTitleView: UIView {
     
     // MARK: - Function
     // MARK: IBAction
+    
+    @IBAction func longPress(_ sender: Any) {
+        self.delegate?.gpTitleView!(userDidFinishLongPress: self)
+    }
     
     @IBAction private func titleViewTapped(_ sender: Any) {
         self.delegate?.gpTitleView!(userDidTapTitleView: self)
