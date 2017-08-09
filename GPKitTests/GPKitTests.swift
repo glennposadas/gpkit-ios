@@ -6,7 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-import XCTest
+/*import XCTest
 @testable import GPKit
 
 class GPKitTests: XCTestCase {
@@ -29,4 +29,4 @@ class GPKitTests: XCTestCase {
         
         GPLog(classSender: self, log: "date: \(date)")
     }
-}
+}*/

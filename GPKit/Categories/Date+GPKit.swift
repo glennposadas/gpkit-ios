@@ -6,6 +6,8 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
+import UIKit
+
 public extension Date {
     
     public func dateAt(hours: Int, minutes: Int) -> Date {

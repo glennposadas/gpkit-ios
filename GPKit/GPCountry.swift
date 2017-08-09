@@ -6,7 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /** A class made for any country functionality, such as generating a list of countries,
  *  country codes, dialing codes.

@@ -6,7 +6,6 @@
 //  Copyright © 2017 Glenn Posadas. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public class GPKitError {

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Citus Labs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class GPJSONReader {
     
