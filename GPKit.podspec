@@ -17,11 +17,9 @@ Pod::Spec.new do |s|
 
   s.name         = "GPKit"
   s.version      = "1.0.0"
-  s.summary      = "A framework kit for starting an iOS project"
+  s.summary      = "A framework for your production iOS development."
   s.description  = "GPKit is a framework that basically has some of the most commonly used utilities or categories in building iOS projects."
   s.homepage     = "https://github.com/glennposadas/gpkit-ios"
-
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -31,7 +29,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = "MIT License"
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,8 +50,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "9.0"
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios
+  s.ios.deployment_target = "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -68,8 +66,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/glennposadas/gpkit-ios.git", :tag => "master" }
-
+  s.source       = { :git => "URL", :tag => "1.0.0" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -79,9 +76,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "GPKit", "GPKit/**/*.{h,m,swift}"
-
-  # s.public_header_files = "Classes/**/*.h"
+  s.source_files = "GPKit", "GPKit/**/*.{h,m,swift}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -97,10 +92,6 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-
-  # s.libraries = "iconv", "xml2"
-
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
-
-
+  
 end
