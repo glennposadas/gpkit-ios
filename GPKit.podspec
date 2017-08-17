@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.resources = "GPKit/**/*.{swift}"
+  s.resources = "GPKit/**/*.{xib}"
 
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
