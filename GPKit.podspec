@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GPKit"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "A framework for your production iOS development."
   s.description  = "GPKit is a framework that basically has some of the most commonly used utilities or categories in building iOS projects."
   s.homepage     = "https://github.com/glennposadas/gpkit-ios"
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/glennposadas/gpkit-ios.git", :branch => 'master', :tag => '0.1.1' }
+  s.source       = { :git => "https://github.com/glennposadas/gpkit-ios.git", :branch => 'master', :tag => '0.1.2' }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = "GPKit", "GPKit/**/*.{swift,xib}"
+  s.source_files = "GPKit", "GPKit/**/*.{swift}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,6 +89,9 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
+
+  s.resources = "GPKit/**/*.{swift}"
+
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
