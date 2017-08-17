@@ -76,7 +76,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = "GPKit", "GPKit/**/*.{swift}"
+  s.source_files = "GPKit", "GPKit/**/*.{swift,xib}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

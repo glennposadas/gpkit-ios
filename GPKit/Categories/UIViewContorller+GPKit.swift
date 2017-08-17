@@ -70,6 +70,16 @@ public extension UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attributes
     }
     
+    public func setupBackButtonTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
+        var attributes: [String : Any] = [NSFontAttributeName : font]
+        
+        if let textColor = textColor {
+            attributes[NSForegroundColorAttributeName] = textColor
+        }
+        
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.setTitleTextAttributes(attributes, for: .normal)
+    }
+    
     public func makeNavBarTransparent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
