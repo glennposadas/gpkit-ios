@@ -205,7 +205,7 @@ public extension UIViewController {
     public func setNavBarTitleWithFeedback(image: UIImage, navBarTintColor: UIColor) {
         self.navigationController?.navigationBar.tintColor = navBarTintColor
         
-        let gpKitBundle = Bundle(identifier: "ph.cituslabs.app.gpkit")
+        let gpKitBundle = Bundle(for: GPTitleView.self)
         if let gpTitleView = UINib(nibName: "GPTitleView", bundle: gpKitBundle).instantiate(withOwner: nil, options: nil)[0]
             as? GPTitleView {
             
