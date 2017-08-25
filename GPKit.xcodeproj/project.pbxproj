@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450A655B1F502D5600BB2171 /* TimeInterval+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450A655A1F502D5600BB2171 /* TimeInterval+GPKit.swift */; };
 		451803F91EC2BC99008268B8 /* GPLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451803F81EC2BC99008268B8 /* GPLog.swift */; };
 		45435CE81EE50A350015B3B4 /* Array+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CD91EE50A350015B3B4 /* Array+GPKit.swift */; };
 		45435CE91EE50A350015B3B4 /* Date+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CDA1EE50A350015B3B4 /* Date+GPKit.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450A655A1F502D5600BB2171 /* TimeInterval+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+GPKit.swift"; sourceTree = "<group>"; };
 		451803F81EC2BC99008268B8 /* GPLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPLog.swift; sourceTree = "<group>"; };
 		45435CD91EE50A350015B3B4 /* Array+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GPKit.swift"; sourceTree = "<group>"; };
 		45435CDA1EE50A350015B3B4 /* Date+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+GPKit.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				45435CE61EE50A350015B3B4 /* UIView+GPKit.swift */,
 				45435CE71EE50A350015B3B4 /* UIViewContorller+GPKit.swift */,
 				45E5A0541F2E760A00F89B11 /* Bundle+GPKit.swift */,
+				450A655A1F502D5600BB2171 /* TimeInterval+GPKit.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				45435CEE1EE50A350015B3B4 /* Sequence+GPKit.swift in Sources */,
 				45435CF01EE50A350015B3B4 /* UIColor+GPKit.swift in Sources */,
 				45435CF61EE50A350015B3B4 /* UIViewContorller+GPKit.swift in Sources */,
+				450A655B1F502D5600BB2171 /* TimeInterval+GPKit.swift in Sources */,
 				45435CEF1EE50A350015B3B4 /* String+GPKit.swift in Sources */,
 				45435CEC1EE50A350015B3B4 /* Error+GPKit.swift in Sources */,
 				45E5A0551F2E760A00F89B11 /* Bundle+GPKit.swift in Sources */,
