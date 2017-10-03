@@ -10,6 +10,22 @@ import UIKit
 
 public extension String {
     
+    /** Format the 24 hour string into 12 hour.
+     */
+    
+    public func format24HrStringTo12Hr() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "H:mm:ss"
+        
+        if let inDate = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "h:mm a"
+            let outTime = dateFormatter.string(from:inDate)
+            return "\(outTime)"
+        }
+        
+        return self
+    }
+
     /** Identical to the extension of UITextField's hasValue()
      */
     

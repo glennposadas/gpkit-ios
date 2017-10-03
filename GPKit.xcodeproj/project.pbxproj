@@ -24,6 +24,7 @@
 		45435CF41EE50A350015B3B4 /* UITextField+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE51EE50A350015B3B4 /* UITextField+GPKit.swift */; };
 		45435CF51EE50A350015B3B4 /* UIView+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE61EE50A350015B3B4 /* UIView+GPKit.swift */; };
 		45435CF61EE50A350015B3B4 /* UIViewContorller+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45435CE71EE50A350015B3B4 /* UIViewContorller+GPKit.swift */; };
+		45637CEF1F836662005F4886 /* URL+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45637CEE1F836662005F4886 /* URL+GPKit.swift */; };
 		456893D31EFA9B64008308EF /* GPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456893D21EFA9B64008308EF /* GPCountry.swift */; };
 		459BA5861EDBD6C300A22001 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */; };
 		45A00C261EBD16C1001BC817 /* GPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A00C1C1EBD16C0001BC817 /* GPKit.framework */; };
@@ -64,6 +65,7 @@
 		45435CE51EE50A350015B3B4 /* UITextField+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+GPKit.swift"; sourceTree = "<group>"; };
 		45435CE61EE50A350015B3B4 /* UIView+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GPKit.swift"; sourceTree = "<group>"; };
 		45435CE71EE50A350015B3B4 /* UIViewContorller+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+GPKit.swift"; sourceTree = "<group>"; };
+		45637CEE1F836662005F4886 /* URL+GPKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+GPKit.swift"; sourceTree = "<group>"; };
 		456893D21EFA9B64008308EF /* GPCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCountry.swift; sourceTree = "<group>"; };
 		459BA5851EDBD6C300A22001 /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
 		45A00C1C1EBD16C0001BC817 /* GPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				45435CE71EE50A350015B3B4 /* UIViewContorller+GPKit.swift */,
 				45E5A0541F2E760A00F89B11 /* Bundle+GPKit.swift */,
 				450A655A1F502D5600BB2171 /* TimeInterval+GPKit.swift */,
+				45637CEE1F836662005F4886 /* URL+GPKit.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				45435CF01EE50A350015B3B4 /* UIColor+GPKit.swift in Sources */,
 				45435CF61EE50A350015B3B4 /* UIViewContorller+GPKit.swift in Sources */,
 				450A655B1F502D5600BB2171 /* TimeInterval+GPKit.swift in Sources */,
+				45637CEF1F836662005F4886 /* URL+GPKit.swift in Sources */,
 				45435CEF1EE50A350015B3B4 /* String+GPKit.swift in Sources */,
 				45435CEC1EE50A350015B3B4 /* Error+GPKit.swift in Sources */,
 				45E5A0551F2E760A00F89B11 /* Bundle+GPKit.swift in Sources */,
