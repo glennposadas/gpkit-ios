@@ -31,9 +31,9 @@
 		45A00C2B1EBD16C1001BC817 /* GPKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A00C2A1EBD16C1001BC817 /* GPKitTests.swift */; };
 		45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A53C641EE7C767001FAE8B /* GPJSONReader.swift */; };
 		45AFBF831EE9A12300396D8D /* GPTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AFBF821EE9A12300396D8D /* GPTitleView.xib */; };
-		45AFBF851EE9A14000396D8D /* GPTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFBF841EE9A14000396D8D /* GPTitleView.swift */; };
 		45E5A0551F2E760A00F89B11 /* Bundle+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E5A0541F2E760A00F89B11 /* Bundle+GPKit.swift */; };
 		45E6290D1EF50B5600BD34ED /* GPNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E6290C1EF50B5600BD34ED /* GPNotification.swift */; };
+		45ED0BA01F84E0A6000EF27B /* GPTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED0B9F1F84E0A6000EF27B /* GPTitleView.swift */; };
 		45F54A451EF9A92C00935C9E /* UIButton+GPKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F54A441EF9A92C00935C9E /* UIButton+GPKit.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,9 +75,9 @@
 		45A00C2C1EBD16C1001BC817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A53C641EE7C767001FAE8B /* GPJSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPJSONReader.swift; sourceTree = "<group>"; };
 		45AFBF821EE9A12300396D8D /* GPTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTitleView.xib; sourceTree = "<group>"; };
-		45AFBF841EE9A14000396D8D /* GPTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTitleView.swift; sourceTree = "<group>"; };
 		45E5A0541F2E760A00F89B11 /* Bundle+GPKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+GPKit.swift"; sourceTree = "<group>"; };
 		45E6290C1EF50B5600BD34ED /* GPNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNotification.swift; sourceTree = "<group>"; };
+		45ED0B9F1F84E0A6000EF27B /* GPTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTitleView.swift; sourceTree = "<group>"; };
 		45F54A441EF9A92C00935C9E /* UIButton+GPKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+GPKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,8 +188,8 @@
 		45AFBF811EE9A07A00396D8D /* TitleView */ = {
 			isa = PBXGroup;
 			children = (
+				45ED0B9F1F84E0A6000EF27B /* GPTitleView.swift */,
 				45AFBF821EE9A12300396D8D /* GPTitleView.xib */,
-				45AFBF841EE9A14000396D8D /* GPTitleView.swift */,
 			);
 			name = TitleView;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Citus Labs";
 				TargetAttributes = {
 					45A00C1B1EBD16C0001BC817 = {
@@ -309,7 +309,6 @@
 			files = (
 				45435CF51EE50A350015B3B4 /* UIView+GPKit.swift in Sources */,
 				45F54A451EF9A92C00935C9E /* UIButton+GPKit.swift in Sources */,
-				45AFBF851EE9A14000396D8D /* GPTitleView.swift in Sources */,
 				45A53C651EE7C767001FAE8B /* GPJSONReader.swift in Sources */,
 				451803F91EC2BC99008268B8 /* GPLog.swift in Sources */,
 				45435CF21EE50A350015B3B4 /* UIImage+GPKit.swift in Sources */,
@@ -321,6 +320,7 @@
 				45435CEF1EE50A350015B3B4 /* String+GPKit.swift in Sources */,
 				45435CEC1EE50A350015B3B4 /* Error+GPKit.swift in Sources */,
 				45E5A0551F2E760A00F89B11 /* Bundle+GPKit.swift in Sources */,
+				45ED0BA01F84E0A6000EF27B /* GPTitleView.swift in Sources */,
 				45435CEA1EE50A350015B3B4 /* DispatchQueue+GPKit.swift in Sources */,
 				45435CEB1EE50A350015B3B4 /* Double+GPKit.swift in Sources */,
 				456893D31EFA9B64008308EF /* GPCountry.swift in Sources */,
@@ -364,7 +364,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -372,7 +374,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,6 +408,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -418,7 +425,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -426,7 +435,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -448,6 +461,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -474,7 +488,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -496,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ph.cituslabs.app.gpkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -510,7 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.cituslabs.app.GPKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -524,7 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ph.cituslabs.app.GPKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

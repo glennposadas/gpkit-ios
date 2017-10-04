@@ -61,7 +61,7 @@ public extension UIViewController {
     }
     
     public func setupNavBarTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
-        var attributes: [String : Any] = [NSAttributedStringKey.font.rawValue : font]
+        var attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font : font]
         
         if let textColor = textColor {
             attributes[NSAttributedStringKey.foregroundColor] = textColor
@@ -71,7 +71,7 @@ public extension UIViewController {
     }
     
     public func setupBackButtonTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
-        var attributes: [String : Any] = [NSAttributedStringKey.font.rawValue : font]
+        var attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font : font]
         
         if let textColor = textColor {
             attributes[NSAttributedStringKey.foregroundColor] = textColor
