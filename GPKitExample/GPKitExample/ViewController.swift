@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         
         let sampleInvalidEmail = "f214321fda"
         print("Is \"\(sampleInvalidEmail)\" a valid email? \(sampleInvalidEmail.isValidEmail())")
+        
+        // Set attributed title.
+        self.setNavBarTitleWithAttributedString(title: "Hello World!", color: .red, font: UIFont.boldSystemFont(ofSize: 14.0))
     }
 }
 

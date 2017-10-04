@@ -233,7 +233,7 @@ public extension UIViewController {
     public func setNavBarTitleWithAttributedString(title: String, color: UIColor, font: UIFont) {
         
         let titleLabel = UILabel()
-        let attributes = [NSAttributedStringKey.foregroundColor: color,
+        let attributes = [NSAttributedStringKey.foregroundColor : color,
                           NSAttributedStringKey.font : font as Any]
         titleLabel.attributedText = NSAttributedString(string: title, attributes: attributes)
         titleLabel.sizeToFit()

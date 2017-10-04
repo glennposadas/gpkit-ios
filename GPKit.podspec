@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GPKit"
-  s.version      = "0.1.3"
+  s.version      = "0.1.5"
   s.summary      = "A framework for your production iOS development."
   s.description  = "GPKit is a framework that basically has some of the most commonly used utilities or categories in building iOS projects."
   s.homepage     = "https://github.com/glennposadas/gpkit-ios"
