@@ -61,20 +61,20 @@ public extension UIViewController {
     }
     
     public func setupNavBarTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
-        var attributes: [String : Any] = [NSFontAttributeName : font]
+        var attributes: [String : Any] = [NSAttributedStringKey.font.rawValue : font]
         
         if let textColor = textColor {
-            attributes[NSForegroundColorAttributeName] = textColor
+            attributes[NSAttributedStringKey.foregroundColor] = textColor
         }
         
         self.navigationController?.navigationBar.titleTextAttributes = attributes
     }
     
     public func setupBackButtonTitleCustomFont(font: UIFont, textColor: UIColor? = nil) {
-        var attributes: [String : Any] = [NSFontAttributeName : font]
+        var attributes: [String : Any] = [NSAttributedStringKey.font.rawValue : font]
         
         if let textColor = textColor {
-            attributes[NSForegroundColorAttributeName] = textColor
+            attributes[NSAttributedStringKey.foregroundColor] = textColor
         }
         
         self.navigationController?.navigationBar.backItem?.backBarButtonItem?.setTitleTextAttributes(attributes, for: .normal)
@@ -233,8 +233,8 @@ public extension UIViewController {
     public func setNavBarTitleWithAttributedString(title: String, color: UIColor, font: UIFont) {
         
         let titleLabel = UILabel()
-        let attributes = [NSForegroundColorAttributeName: color,
-                          NSFontAttributeName : font as Any]
+        let attributes = [NSAttributedStringKey.foregroundColor: color,
+                          NSAttributedStringKey.font : font as Any]
         titleLabel.attributedText = NSAttributedString(string: title, attributes: attributes)
         titleLabel.sizeToFit()
         self.navigationItem.titleView = titleLabel
