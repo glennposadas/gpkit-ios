@@ -222,6 +222,7 @@ public extension UIViewController {
         if let gpTitleView = UINib(nibName: "GPTitleView", bundle: gpKitBundle).instantiate(withOwner: nil, options: nil)[0]
             as? GPTitleView {
             
+            gpTitleView.delegate = self as? GPTitleViewDelegate
             gpTitleView.image_Title.image = image
             self.navigationItem.titleView = gpTitleView
         }
@@ -313,3 +314,4 @@ public extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 }
+
