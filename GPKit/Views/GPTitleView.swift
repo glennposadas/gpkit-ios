@@ -11,13 +11,9 @@ import UIKit
 /** Optional protocol/delegate that tells when the title was tapped.
  */
 
-public protocol GPTitleViewDelegate: NSObjectProtocol {
-
-}
-
-public extension GPTitleViewDelegate {
-    func gpTitleView(userDidTapTitleView gpTitleView: GPTitleView) {}
-    func gpTitleView(userDidFinishLongPress gpTitleView: GPTitleView) {}
+@objc public protocol GPTitleViewDelegate: NSObjectProtocol {
+    @objc optional func gpTitleView(userDidTapTitleView gpTitleView: GPTitleView)
+    @objc optional func gpTitleView(userDidFinishLongPress gpTitleView: GPTitleView)
 }
 
 public class GPTitleView: UIView {
@@ -32,10 +28,10 @@ public class GPTitleView: UIView {
     // MARK: IBAction
     
     @IBAction func longPress(_ sender: Any) {
-        self.delegate?.gpTitleView(userDidTapTitleView: self)
+        self.delegate?.gpTitleView!(userDidTapTitleView: self)
     }
     
     @IBAction private func titleViewTapped(_ sender: Any) {
-        self.delegate?.gpTitleView(userDidTapTitleView: self)
+        self.delegate?.gpTitleView!(userDidTapTitleView: self)
     }
 }
