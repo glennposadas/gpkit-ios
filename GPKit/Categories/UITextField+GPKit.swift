@@ -95,7 +95,7 @@ public extension UITextField {
         if let placeHolder = placeholderText {
             let localizedPlaceHolder = NSLocalizedString(placeHolder, comment: "")
             let attributedString = NSAttributedString(string: localizedPlaceHolder,
-                                                      attributes: [NSForegroundColorAttributeName: textColor])
+                                                      attributes: [NSAttributedStringKey.foregroundColor: textColor])
             self.attributedPlaceholder = attributedString
         }
     }
