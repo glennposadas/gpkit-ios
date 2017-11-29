@@ -11,7 +11,11 @@ import UIKit
 public extension DispatchQueue {
     private static var _onceTracker = [String]()
     
+<<<<<<< HEAD
     public class func once(file: String = #file, function: String = #function, line: Int = #line, block:()->Void) {
+=======
+    public class func once(file: String = #file, function: String = #function, line: Int = #line, block: (()->Void)) {
+>>>>>>> 191d73fecc2afbba7424659dd16fa1dd12588cd0
         let token = file + ":" + function + ":" + String(line)
         once(token: token, block: block)
     }
@@ -23,7 +27,11 @@ public extension DispatchQueue {
      - parameter token: A unique reverse DNS style name such as com.vectorform.<name> or a GUID
      - parameter block: Block to execute once
      */
+<<<<<<< HEAD
     public class func once(token: String, block:()->Void) {
+=======
+    public class func once(token: String, block: (()->Void)) {
+>>>>>>> 191d73fecc2afbba7424659dd16fa1dd12588cd0
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }
         

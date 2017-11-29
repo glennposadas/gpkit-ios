@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GPKit"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "A framework for your production iOS development."
   s.description  = "GPKit is a framework that basically has some of the most commonly used utilities or categories in building iOS projects."
   s.homepage     = "https://github.com/glennposadas/gpkit-ios"
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/glennposadas/gpkit-ios.git", :branch => 'master', :tag => '0.1.4' }
+  s.source       = { :git => "https://github.com/glennposadas/gpkit-ios.git", :branch => 'Swift-4.0', :tag => '0.1.5' }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -95,6 +95,6 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
 
 end
